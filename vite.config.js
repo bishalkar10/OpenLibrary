@@ -4,22 +4,23 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: {
-      '/people': {
-        target: 'https://openlibrary.org',
-        changeOrigin: true,
-        cache: true,
-      },
-      '/search': {
-        target: 'https://openlibrary.org',
-        changeOrigin: true,
-        cache: true,
-      },
-      '/work': {
-        target: 'https://openlibrary.org',
-        changeOrigin: true,
-        cache: true,
-      },
-    },
+    // proxy not working in the netlify deployment
+    // proxy: {
+    //   '/people': {
+    //     target: 'https://openlibrary.org',
+    //     changeOrigin: true,
+    //     cache: true,
+    //   },
+    //   '/search': {
+    //     target: 'https://openlibrary.org',
+    //     changeOrigin: true,
+    //     cache: true,
+    //   },
+    //   '/work': {
+    //     target: 'https://openlibrary.org',
+    //     changeOrigin: true,
+    //     cache: true,
+    //   },
+    // },
   },
 });
