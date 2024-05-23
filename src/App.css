@@ -1,0 +1,36 @@
+body {
+  background-color:  #8d99ae;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.table-container {
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+thead, table, tbody {
+  min-height: 100%;
+}
+
+thead tr{
+  background-color: #415a77;
+  color: white;
+}
+
+tbody tr {
+  background-color:  #e0e1dd;
+}
+
+tbody tr:hover {
+  background-color: #415a77;
+  color: white;
+  transition: all 0.3s;
+}
+
+th, td {
+  padding: 0.5rem;
+}
