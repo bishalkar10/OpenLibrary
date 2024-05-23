@@ -43,7 +43,7 @@ export default function Table() {
   useEffect(() => {
     const fetchSubjects = async (path) => {
       try {
-        const res = await fetch(`${path}.json`);
+        const res = await fetch(`https://openlibrary.org${path}.json`);
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
@@ -57,7 +57,7 @@ export default function Table() {
 
     const fetchAuthorDetails = async (name) => {
       try {
-        const res = await fetch(`/search/authors.json?q=${name}`);
+        const res = await fetch(`https://openlibrary.org/search/authors.json?q=${name}`);
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
@@ -78,7 +78,7 @@ export default function Table() {
     const fetchData = async (callback) => {
       setLoading(true)
       try {
-        const res = await fetch("/people/mekBot/books/want-to-read.json");
+        const res = await fetch("https://openlibrary.org/people/mekBot/books/want-to-read.json");
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
